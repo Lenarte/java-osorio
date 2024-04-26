@@ -19,4 +19,11 @@ public class Vilao extends Personagem {
         this.nivel = nivel;
     }
 
+    @Override
+    public String toString() {
+
+        return super.toString() + "\nNivel" + nivel;
+
+    }
+
 }
