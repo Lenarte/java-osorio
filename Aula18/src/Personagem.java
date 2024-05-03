@@ -32,8 +32,8 @@ public class Personagem {
     @Override
     public String toString() {
 
-        return "\nNome: " + nome + "\nPontos de vida" + ptsVida;
-
+        return "\nNome: " + nome +
+                "\nPontos de vida: " + ptsVida;
     }
 
 }

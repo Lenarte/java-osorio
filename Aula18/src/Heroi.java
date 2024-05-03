@@ -22,8 +22,7 @@ public class Heroi extends Personagem {
     @Override
     public String toString() {
 
-        return super.toString() + "\nClasse" + classe;
-
+        return super.toString() + "\nClasse: " + classe;
     }
 
 }

@@ -3,11 +3,9 @@ public class Vilao extends Personagem {
     private int nivel;
 
     public Vilao() {
-
         setNome("Slime");
         setPtsVida(1);
         nivel = 1;
-
     }
 
     public Vilao(String nome, int ptsVida, int nivel) {
@@ -27,8 +25,7 @@ public class Vilao extends Personagem {
     @Override
     public String toString() {
 
-        return super.toString() + "\nNivel" + nivel;
-
+        return super.toString() + "\nNível: " + nivel;
     }
 
 }
