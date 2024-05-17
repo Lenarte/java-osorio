@@ -24,18 +24,18 @@ public abstract class GerenciadorJogo {
 
     public static void lerJogos() throws IOException {
 
-        try (FileReader fReader = new FileReader(ARQUIVO); BufferedReader bReader = new BufferedReader(fReader)) {
+        try (FileReader fReader = new FileReader(ARQUIVO);
+                BufferedReader bReader = new BufferedReader(fReader)) {
 
             String linha;
 
             while ((linha = bReader.readLine()) != null) {
 
                 System.out.println(linha);
-                
+
             }
 
         }
-
 
     }
 
@@ -43,29 +43,29 @@ public abstract class GerenciadorJogo {
 
         ArrayList<Jogo> listaJogos = new ArrayList<>();
 
-        try (FileReader fReader = new FileReader(ARQUIVO); BufferedReader bReader = new BufferedReader(fReader)) {
+        try (FileReader fReader = new FileReader(ARQUIVO);
+                BufferedReader bReader = new BufferedReader(fReader)) {
 
             String linha;
 
             while ((linha = bReader.readLine()) != null) {
 
-                String [] dadosJogo = linha.split(", ");
+                String[] dadosJogo = linha.split(", ");
 
-                Jogo jogo = new Jogo(Integer.parseInt(dadosJogo[0]), dadosJogo[1], dadosJogo[2]);
+                Jogo jogo = new Jogo(Integer.parseInt(dadosJogo[0]),
+                        dadosJogo[1],
+                        dadosJogo[2]);
 
                 listaJogos.add(jogo);
-                
             }
         }
 
         if (listaJogos.isEmpty()) {
 
-            throw new Exception("\nNão há jogos cadastrados!!");
-            
+            throw new Exception("\nNão há jogos cadastrados!");
         }
 
         return listaJogos;
-
 
     }
 
