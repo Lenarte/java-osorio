@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 public class App {
     public static void main(String[] args) throws Exception {
 
@@ -10,6 +12,18 @@ public class App {
         GerenciadorJogo.salvarJogo(jogo3);
 
         System.out.println("3 Jogos foram salvos no arquivo 'jogos.txt'");
+
+        System.out.println("\nJogos cadastrados no arquivo: ");
+
+        try {
+
+            GerenciadorJogo.lerJogos();
+        } catch (IOException e) {
+            
+            System.out.println(e.getMessage());
+        }
+            
+        
 
     }
 }
